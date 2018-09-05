@@ -1,6 +1,6 @@
 
 $.ajax({
-    url: `https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=ee3db643ed324867821edfe4ad305254`,
+    url: `https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=e91388af986144faa7542cbab8e4cfa5`,
     success:function(data){
         console.log(data)
 
@@ -21,13 +21,15 @@ $.ajax({
         
         for(let i = 0; i < 10; i++){
               document.querySelector(".container-main").innerHTML +=
-              `<div class="news-card">
-          <div class="img-title" style="background-image: url(${data.articles[i].urlToImage})"></div>
-          <div class="headlines">
-              ${data.articles[i].title}
-          </div>
-          <div class="channel-name"></div>
-          <div class="date"></div>`
+             `<div class="news-card"> <a href="${data.articles[0].url}" target="blank" >
+                <div class="img-title" style="background-image: url(${data.articles[i].urlToImage})"></div>
+                <div class="headlines">
+                  ${data.articles[i].title}
+                </div>
+                </a>
+                <div class="channel-name">${data.articles[0].source.name}</div>
+                <div class="date">${data.articles[0].publishedAt}</div>
+              </div>`
         }
         // document.querySelector(".headlines").innerHTML = data.articles[0].title;
 
