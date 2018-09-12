@@ -42,10 +42,8 @@ header{
 }
 .swiper-slide {
    width: 100%;
-   height: 79%;
-   /* display: flex;
-   justify-content: flex-start;
-   align-items: center; */
+   height: 79%;   
+  
    background-position: center;
    /* background-size: ; */
    background-repeat: no-repeat;
@@ -72,7 +70,6 @@ p.text {
     
 }
 
-
 .img-title{
     width: 100%;
     height: 188px;
@@ -92,9 +89,6 @@ p.text {
    flex: 1 1 160px;
    margin: 15px;
    overflow: hidden;
-
-    
-
 }
 a{
     text-decoration: none;
@@ -140,5 +134,10 @@ a{
     }
     .date{
         margin: 5px 0 0 20px;
+    }
+    .swiper-slide{
+        width: 25%;
+        background-position: center;
+        background-size: contain;
     }
 }
